@@ -74,15 +74,15 @@ setInterval(async () => {
   });
 }, 2000);
 
-// app.listen(4000, () => {
-//   console.log("http://localhost:4000 listening...");
-// });
-
-const server = spdy.createServer({
-  key: fs.readFileSync("./server.key"),
-  cert: fs.readFileSync("./server.crt")
-}, app);
-
-server.listen(4000, () => {
-  console.log("https://localhost:4000 listening...");
+app.listen(4000, () => {
+  console.log("http://localhost:4000 listening...");
 });
+
+// const server = spdy.createServer({
+//   key: fs.readFileSync("./server.key"),
+//   cert: fs.readFileSync("./server.crt")
+// }, app);
+
+// server.listen(4000, () => {
+//   console.log("https://localhost:4000 listening...");
+// });
