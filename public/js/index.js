@@ -1,7 +1,8 @@
 const sseDataElement = document.getElementById('sse-data');
 const urlParams = new URLSearchParams(window.location.search);
 const seq = urlParams.get('seq');
-const eventSource = new EventSource('http://192.168.2.96:4000/subscribe/?seq=' + seq);
+// const eventSource = new EventSource('http://localhost:4000/subscribe/?seq=' + seq);
+const eventSource = new EventSource('https://localhost:4000/subscribe/?seq=' + seq);
 
 // 이벤트 핸들러 등록
 eventSource.addEventListener('notification', (e) => {
