@@ -40,11 +40,22 @@ const headers = {
   "Cache-Control": "no-cache",
 };
 
+function isNumeric(num) {
+  if (num === '' || num === null) {
+    return false
+  }
+  return !isNaN(num)
+}
+
 app.get("/subscribe", (req, res) => {
   console.log("request received");
   console.log(req.headers);
   res.writeHead(200, headers);
-  res.counter = req.query.seq || 0;
+
+  const seq = req.query.seq;
+  console.log("seq: " + seq + typeof seq);
+  res.counter = seq && isNumeric(seq) ? seq : 0;
+
   subscribers.push(res);
   res.on("error", (err) => {
     console.log("err: " + err);
