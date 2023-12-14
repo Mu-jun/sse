@@ -4,5 +4,30 @@
     "node-os-utils": "^1.3.7",
     "socket.io": "^4.7.2",
     "spdy": "^4.0.2"
-  }
+  },
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "name": "sse-node",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mu-jun/sse-node.git"
+  },
+  "keywords": [
+    "SSE",
+    "Server-Sent-Event"
+  ],
+  "author": "Mu-jun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mu-jun/sse-node/issues"
+  },
+  "homepage": "https://github.com/Mu-jun/sse-node#readme",
+  "description": ""
 }
